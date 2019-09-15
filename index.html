@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RSocket JS Demo</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <span class="page-link" data-page="home"><a class="navbar-brand" href="/">RSocket JS Demo</a></span>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active page-link" data-page="requestFireAndForget"><a href="">Fire and Forget</a></li>
+              <li class="page-link" data-page="requestResponse"><a href="">Request Response</a></li>
+              <li class="page-link" data-page="requestStream"><a href="">Stream</a></li>
+              <li class="page-link" data-page="requestChannel"><a href="">Channel</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <section class="page home-page">
+        <h2>Home</h2>
+        <p>This is the home page.</p>
+        <p>RSocket JavaScript Demo.</p>
+      </section>
+      <section class="page requestFireAndForget-page">
+        <h2>Fire and Forget</h2>
+        <p>This is paragraph one of Fire and Forget.</p>
+        <p>This is paragraph two of Fire and Forget.</p>
+      </section>
+      <section class="page requestResponse-page">
+        <h2>Request Response</h2>
+        <p>This is paragraph one of Request Response.</p>
+        <p>This is paragraph two of Request Response.</p>
+      </section>
+      <section class="page requestStream-page">
+        <h2>Stream</h2>
+        <p>This is paragraph one of Stream.</p>
+        <p>This is paragraph two of Stream.</p>
+        <ul class="results list-group">
+        </ul>
+      </section>
+      <section class="page requestChannel-page">
+        <h2>Channel</h2>
+        <p>This is paragraph one of Channel.</p>
+        <p>This is paragraph two of Channel.</p>
+      </section>
+    </main>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>

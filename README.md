@@ -26,9 +26,12 @@ npm install
 npm run build
 ```
 
-Open `index.html` in a browser through your IDE (should default to using your IDE's built-in web server), or run
+Open `index.html` in a browser through your IDE (should default to using your IDE's built-in web server).
 
-
+You can also deploy the app to Cloud Foundry (the empty Staticfile file will signal to Cloud Foundry to use the staticfile_buildpack). Target your Cloud Foundry foundation and then run:
+```
+cf push rsocket-client-javascript
+```
 
 ## Inspiration for this app was borrowed from:
 - https://github.com/w3cj/basic-jquery-SPA 

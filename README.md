@@ -33,6 +33,8 @@ You can also deploy the app to Cloud Foundry (the empty Staticfile file will sig
 cf push rsocket-client-javascript
 ```
 
+Make sure you open the browser using http and not https.
+
 ## Inspiration for this app was borrowed from:
 - https://github.com/w3cj/basic-jquery-SPA 
 - https://github.com/bclozel/spring-flights

@@ -1,0 +1,8 @@
+---
+applications:
+  - name: rsocket-client-javascript
+    buildpacks:
+      - staticfile_buildpack
+    routes:
+      - route: rsocket-client-javascript.apps.clearlake.cf-app.com
+

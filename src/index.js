@@ -1,3 +1,4 @@
+const { SERVER_URL } = require('./config.js');
 const home = require('./home.js');
 const requestFireAndForget = require('./requestFireAndForget.js');
 const requestResponse = require('./requestResponse.js');
@@ -7,11 +8,11 @@ const RSClient = require('./RSClient').RSClient;
 
 // window.onload = function init() {
 //     var requestHandler = new RequestHandler();
-//     requestHandler.demoFireAndForget();
+//     ...
 // };
 
-const url = 'ws://rsocket-server.apps.clearlake.cf-app.com/';
-const requestHandler = new RequestHandler(url);
+console.log('Server URL is ' + SERVER_URL);
+const requestHandler = new RequestHandler(SERVER_URL);
 const pageFunctions = {};
 
 $(function() {
@@ -48,52 +49,12 @@ class RequestHandler {
         //this.demoClient = new RSClient(url, new ResponseHandler());
         //this.rsClient.connect(() => this.connectCallback());
         this.rsClient = new RSClient(url);
-        this.rsClient.connect();
+        this.rsClient.connect(() => this.connectCallback());
     }
 
-    // demoFnF() {
-    //     this.rsClient.demoFireAndForget();
-    // }
-
-    // demoFnF() {
-    //     this.rsClient.demoFireAndForget();
-    //
-    //     socket.fireAndForget({
-    //                          data: {message: 'hello world'},
-    //                          metadata: 'hello',
-    //                      });
-    //
-    //
-    //     return this.client.connect().subscribe({
-    //         onComplete: s => {
-    //             this.socket = s;
-    //             cb();
-    //         },
-    //         onError: error => console.error(error),
-    //         onSubscribe: cancel => { this.cancel = cancel}
-    //     });
-    //
-    // }
-
-    // demoResponse() {
-    //     this.rsClient.demoResponse();
-    // }
-    //
-    // connectCallback() {
-    //     console.log('Current page is ' + this.dataset.page);
-    //     this.rsClient.demoFireAndForget().subscribe({
-    //         onError: error => console.error(error),
-    //         onNext: msg => {
-    //             console.log('Got onNext for demoFireAndForget')
-    //         },
-    //         onComplete: msg => {
-    //             console.log('Got onComplete for demoFireAndForget')
-    //         },
-    //         onSubscribe: msg => {
-    //             console.log('Got onSubscribe for demoFireAndForget')
-    //         },
-    //     });
-    // }
+    connectCallback() {
+        console.log('In connectCallback: connection established');
+    }
 }
 
 // class ResponseHandler {

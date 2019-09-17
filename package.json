@@ -2,12 +2,13 @@
   "name": "rsocket-client-js",
   "version": "1.0.0",
   "description": "Demo of RSocket from JavaScript using rsocket-js",
-  "main": "index.js",
+  "private": true,
   "dependencies": {
+    "dotenv": "^8.1.0",
     "rsocket-websocket-client": "0.0.10"
   },
   "devDependencies": {
-    "script-loader": "^0.7.2",
+    "before-build-webpack": "^0.2.9",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.8"
   },
